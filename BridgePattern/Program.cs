@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BridgePattern.Data;
+using BridgePattern.Loggers;
+using BridgePattern.Messages;
+using System;
 
 namespace BridgePattern
 {
@@ -6,7 +9,22 @@ namespace BridgePattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var exception = new CustomException().GetException();
+
+            var mongoLogger = new MongoDbLogger(new SpecificMessage());
+            mongoLogger.Write(exception);
+
+            Console.WriteLine("\n=================================================\n");
+
+            var sqlLogger = new SqlLogger(new DetailedMessage());
+            sqlLogger.Write(exception);
+
+            Console.WriteLine("\n=================================================\n");
+
+            var textFileLogger = new TextFileLogger(new CustomMessage());
+            textFileLogger.Write(exception);
+
+            Console.ReadLine();
         }
     }
 }
