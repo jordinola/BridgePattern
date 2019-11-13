@@ -1,6 +1,5 @@
 ﻿using BridgePattern.Data;
 using BridgePattern.Loggers;
-using BridgePattern.Messages;
 using System;
 
 namespace BridgePattern
@@ -11,17 +10,20 @@ namespace BridgePattern
         {
             var exception = new CustomException().GetException();
 
-            var mongoLogger = new MongoDbLogger(new SpecificMessage());
+            var mongoLogger = new MongoDbLogger();
+            Console.WriteLine("Mongo Logger");
             mongoLogger.Write(exception);
 
             Console.WriteLine("\n=================================================\n");
 
-            var sqlLogger = new SqlLogger(new DetailedMessage());
+            var sqlLogger = new SqlLogger();
+            Console.WriteLine("SQL Logger");
             sqlLogger.Write(exception);
 
             Console.WriteLine("\n=================================================\n");
 
-            var textFileLogger = new TextFileLogger(new CustomMessage());
+            var textFileLogger = new TextFileLogger();
+            Console.WriteLine("Text File Logger");
             textFileLogger.Write(exception);
 
             Console.ReadLine();

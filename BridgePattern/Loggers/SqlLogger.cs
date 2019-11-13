@@ -1,18 +1,13 @@
-﻿using BridgePattern.Messages;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace BridgePattern.Loggers
 {
-    public class SqlLogger : Logger
+    public class SqlLogger : ILogger
     {
-        public SqlLogger(ICustomMessage customMessage) : base (customMessage) { }
-
-        public override void Write(Exception ex)
+        public void Write(Exception ex)
         {
             // SQL write logic goes here
-            Console.WriteLine(_customMessage.GetMessage(ex));
+            Console.WriteLine($"An exception ocurred in date: { DateTime.Now }. StackTrace: { ex.StackTrace } InnerException: { ex.InnerException } Message: { ex.Message }");
         }
     }
 }

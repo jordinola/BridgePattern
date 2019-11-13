@@ -1,18 +1,13 @@
-﻿using BridgePattern.Messages;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace BridgePattern.Loggers
 {
-    public class MongoDbLogger : Logger
+    public class MongoDbLogger : ILogger
     {
-        public MongoDbLogger(ICustomMessage customMessage) : base (customMessage) { }
-
-        public override void Write(Exception ex)
+        public void Write(Exception ex)
         {
             // MongoDb write logic goes here
-            Console.WriteLine(_customMessage.GetMessage(ex));
+            Console.WriteLine($"An exception ocurred in date: { DateTime.Now } with message { ex.Message }");
         }
     }
 }
