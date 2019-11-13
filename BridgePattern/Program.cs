@@ -1,6 +1,6 @@
-﻿using BridgePattern.Data;
-using BridgePattern.Loggers;
-using BridgePattern.Messages;
+﻿using BridgePattern.ConcreteImplementor;
+using BridgePattern.Data;
+using BridgePattern.RefinedAbstraction;
 using System;
 
 namespace BridgePattern

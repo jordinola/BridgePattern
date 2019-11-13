@@ -9,3 +9,14 @@ C:\Users\jjob3\Source\Repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\
 C:\Users\jjob3\Source\Repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\BridgePattern.pdb
 C:\Users\jjob3\Source\Repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.dll
 C:\Users\jjob3\Source\Repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.pdb
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\BridgePattern.deps.json
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\BridgePattern.runtimeconfig.json
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\BridgePattern.runtimeconfig.dev.json
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\BridgePattern.dll
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\bin\Debug\netcoreapp2.1\BridgePattern.pdb
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.csprojAssemblyReference.cache
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.csproj.CoreCompileInputs.cache
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.AssemblyInfoInputs.cache
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.AssemblyInfo.cs
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.dll
+C:\Users\jordinola\source\repos\BridgePattern\BridgePattern\obj\Debug\netcoreapp2.1\BridgePattern.pdb

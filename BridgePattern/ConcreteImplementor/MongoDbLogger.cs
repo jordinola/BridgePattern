@@ -1,9 +1,8 @@
-﻿using BridgePattern.Messages;
+﻿using BridgePattern.Abstraction;
+using BridgePattern.Implementor;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BridgePattern.Loggers
+namespace BridgePattern.ConcreteImplementor
 {
     public class MongoDbLogger : Logger
     {

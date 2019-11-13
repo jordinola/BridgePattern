@@ -1,6 +1,7 @@
-﻿using System;
+﻿using BridgePattern.Abstraction;
+using System;
 
-namespace BridgePattern.Messages
+namespace BridgePattern.RefinedAbstraction
 {
     public class DetailedMessage : ICustomMessage
     {

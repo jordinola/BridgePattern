@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BridgePattern.Messages
+namespace BridgePattern.Abstraction
 {
     public interface ICustomMessage
     {

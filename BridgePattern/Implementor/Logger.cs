@@ -1,9 +1,7 @@
-﻿using BridgePattern.Messages;
+﻿using BridgePattern.Abstraction;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BridgePattern.Loggers
+namespace BridgePattern.Implementor
 {
     public abstract class Logger
     {
