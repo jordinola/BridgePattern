@@ -20,7 +20,7 @@ namespace Tests.RefinedAbstraction
         }
 
         [Test]
-        public void GetDefaultErrorMeessage()
+        public void GetDefaultErrorMessage()
         {
             var errorMessage = error.GetMessage(ex);
             errorMessage.Should().Be("An error ocurred in the application");

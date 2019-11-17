@@ -51,6 +51,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[28.4.1, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[5.9.0, )"
@@ -64,6 +68,10 @@
               "target": "Package",
               "version": "[3.0.0-preview5.19224.8, )",
               "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",

@@ -20,7 +20,7 @@ namespace Tests.RefinedAbstraction
         }
 
         [Test]
-        public void GetCustomErrorMeessage()
+        public void GetCustomErrorMessage()
         {
             var errorMessage = error.GetMessage(ex);
             errorMessage.Should().Be($"An exception ocurred in date: { DateTime.Now }.\n - StackTrace: { ex.StackTrace } \n - InnerException: { ex.InnerException } \n - Message: { ex.Message }");
