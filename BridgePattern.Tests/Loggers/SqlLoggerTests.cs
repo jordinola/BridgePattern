@@ -1,4 +1,4 @@
-﻿using BridgePattern.Data;
+﻿using Bogus;
 using BridgePattern.Loggers;
 using FluentAssertions;
 using NUnit.Framework;
@@ -15,7 +15,7 @@ namespace Tests.Loggers
         public void Setup()
         {
             logger = new SqlLogger();
-            ex = new CustomException().GetException();
+            ex = new Faker<Exception>().Generate();
         }
 
         [Test]
