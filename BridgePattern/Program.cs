@@ -11,7 +11,7 @@ namespace BridgePattern
         {
             var exception = new CustomException().GetException();
 
-            var mongoLogger = new MongoDbLogger(new SpecificError());
+            var mongoLogger = new MongoDbLogger(new DefaultError());
             Console.WriteLine("Mongo Logger");
             mongoLogger.Write(exception);
 
