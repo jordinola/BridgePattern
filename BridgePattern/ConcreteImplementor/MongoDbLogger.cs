@@ -6,7 +6,7 @@ namespace BridgePattern.ConcreteImplementor
 {
     public class MongoDbLogger : Logger
     {
-        public MongoDbLogger(ICustomMessage customMessage) : base (customMessage) { }
+        public MongoDbLogger(IError customMessage) : base (customMessage) { }
 
         public override void Write(Exception ex)
         {

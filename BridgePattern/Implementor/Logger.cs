@@ -5,9 +5,9 @@ namespace BridgePattern.Implementor
 {
     public abstract class Logger
     {
-        public readonly ICustomMessage _customMessage;
+        public readonly IError _customMessage;
 
-        public Logger(ICustomMessage customMessage)
+        public Logger(IError customMessage)
         {
             _customMessage = customMessage;
         }

@@ -6,7 +6,7 @@ namespace BridgePattern.ConcreteImplementor
 {
     public class TextFileLogger : Logger
     {
-        public TextFileLogger(ICustomMessage customMessage) : base (customMessage) { }
+        public TextFileLogger(IError customMessage) : base (customMessage) { }
 
         public override void Write(Exception ex)
         {

@@ -6,7 +6,7 @@ namespace BridgePattern.ConcreteImplementor
 {
     public class SqlLogger : Logger
     {
-        public SqlLogger(ICustomMessage customMessage) : base (customMessage) { }
+        public SqlLogger(IError customMessage) : base (customMessage) { }
 
         public override void Write(Exception ex)
         {

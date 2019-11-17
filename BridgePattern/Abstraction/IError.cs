@@ -2,7 +2,7 @@
 
 namespace BridgePattern.Abstraction
 {
-    public interface ICustomMessage
+    public interface IError
     {
         string GetMessage(Exception ex);
     }

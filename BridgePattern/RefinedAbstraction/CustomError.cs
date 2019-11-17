@@ -3,7 +3,7 @@ using System;
 
 namespace BridgePattern.RefinedAbstraction
 {
-    public class CustomMessage : ICustomMessage
+    public class CustomError : IError
     {
         public string GetMessage(Exception ex)
         {
