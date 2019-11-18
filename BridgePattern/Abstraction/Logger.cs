@@ -1,7 +1,7 @@
-﻿using BridgePattern.Abstraction;
+﻿using BridgePattern.Implementor;
 using System;
 
-namespace BridgePattern.Implementor
+namespace BridgePattern.Abstraction
 {
     public abstract class Logger
     {

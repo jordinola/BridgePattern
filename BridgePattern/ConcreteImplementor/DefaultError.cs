@@ -1,11 +1,11 @@
-﻿using BridgePattern.Abstraction;
+﻿using BridgePattern.Implementor;
 using System;
 
-namespace BridgePattern.RefinedAbstraction
+namespace BridgePattern.ConcreteImplementor
 {
     public class DefaultError : IError
     {
-        public string GetMessage(Exception ex)
+        public string GetErrorMessage(Exception ex)
         {
             return "An error ocurred in the application";
         }

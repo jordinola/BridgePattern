@@ -1,11 +1,11 @@
-﻿using BridgePattern.Abstraction;
+﻿using BridgePattern.Implementor;
 using System;
 
-namespace BridgePattern.RefinedAbstraction
+namespace BridgePattern.ConcreteImplementor
 {
     public class DetailedError : IError
     {
-        public string GetMessage(Exception ex)
+        public string GetErrorMessage(Exception ex)
         {
             return $"An exception ocurred in date: { DateTime.Now }. StackTrace: { ex.StackTrace } InnerException: { ex.InnerException } Message: { ex.Message }";
         }

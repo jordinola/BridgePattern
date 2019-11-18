@@ -1,4 +1,4 @@
-﻿using BridgePattern.Abstraction;
+﻿using BridgePattern.Implementor;
 using Moq;
 using System;
 
@@ -9,7 +9,7 @@ namespace BridgePattern.Tests.ConcreteImplementor.Infraestructure
         public static IError GetIErrorMock()
         {
             var mock = new Mock<IError>();
-            mock.Setup(x => x.GetMessage(It.IsAny<Exception>()))
+            mock.Setup(x => x.GetErrorMessage(It.IsAny<Exception>()))
                 .Returns(string.Empty);
 
             return mock.Object;

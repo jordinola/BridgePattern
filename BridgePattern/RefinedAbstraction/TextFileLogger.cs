@@ -2,7 +2,7 @@
 using BridgePattern.Implementor;
 using System;
 
-namespace BridgePattern.ConcreteImplementor
+namespace BridgePattern.RefinedAbstraction
 {
     public class TextFileLogger : Logger
     {
@@ -11,7 +11,7 @@ namespace BridgePattern.ConcreteImplementor
         public override void Write(Exception ex)
         {
             // Text file write logic goes here
-            Console.WriteLine(_customMessage.GetMessage(ex));
+            Console.WriteLine(_customMessage.GetErrorMessage(ex));
         }
     }
 }

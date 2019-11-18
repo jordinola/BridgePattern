@@ -1,5 +1,5 @@
 ﻿using Bogus;
-using BridgePattern.ConcreteImplementor;
+using BridgePattern.RefinedAbstraction;
 using BridgePattern.Tests.ConcreteImplementor.Infraestructure;
 using FluentAssertions;
 using NUnit.Framework;

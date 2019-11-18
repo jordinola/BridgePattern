@@ -1,6 +1,6 @@
 ﻿using Bogus;
-using BridgePattern.Abstraction;
-using BridgePattern.RefinedAbstraction;
+using BridgePattern.ConcreteImplementor;
+using BridgePattern.Implementor;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
@@ -22,7 +22,7 @@ namespace Tests.RefinedAbstraction
         [Test]
         public void GetDetailedErrorMessage()
         {
-            var errorMessage = error.GetMessage(ex);
+            var errorMessage = error.GetErrorMessage(ex);
             errorMessage.Should().Be($"An exception ocurred in date: { DateTime.Now }. StackTrace: { ex.StackTrace } InnerException: { ex.InnerException } Message: { ex.Message }");
         }
     }
