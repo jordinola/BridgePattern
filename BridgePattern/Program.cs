@@ -11,7 +11,7 @@ namespace BridgePattern
         {
             var exception = new CustomException().GetException();
 
-            WriteToMong(exception);
+            WriteToMongo(exception);
 
             Console.WriteLine("\n=================================================\n");
 
@@ -24,11 +24,11 @@ namespace BridgePattern
             Console.ReadLine();
         }
 
-        private static void WriteToTextFile(Exception exception)
+        private static void WriteToMongo(Exception exception)
         {
-            var textFileLogger = new TextFileLogger(new CustomError());
-            Console.WriteLine("Text File Logger");
-            textFileLogger.Write(exception);
+            var mongoLogger = new MongoDbLogger(new DefaultError());
+            Console.WriteLine("Mongo Logger");
+            mongoLogger.Write(exception);
         }
 
         private static void WriteToSql(Exception exception)
@@ -38,11 +38,11 @@ namespace BridgePattern
             sqlLogger.Write(exception);
         }
 
-        private static void WriteToMong(Exception exception)
+        private static void WriteToTextFile(Exception exception)
         {
-            var mongoLogger = new MongoDbLogger(new DefaultError());
-            Console.WriteLine("Mongo Logger");
-            mongoLogger.Write(exception);
+            var textFileLogger = new TextFileLogger(new SpecificError());
+            Console.WriteLine("Text File Logger");
+            textFileLogger.Write(exception);
         }
     }
 }

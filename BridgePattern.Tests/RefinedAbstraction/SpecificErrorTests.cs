@@ -1,5 +1,5 @@
-﻿using BridgePattern.Abstraction;
-using BridgePattern.Data;
+﻿using Bogus;
+using BridgePattern.Abstraction;
 using BridgePattern.RefinedAbstraction;
 using FluentAssertions;
 using NUnit.Framework;
@@ -16,7 +16,7 @@ namespace Tests.RefinedAbstraction
         public void Setup()
         {
             error = new SpecificError();
-            ex = new CustomException().GetException();
+            ex = new Faker<Exception>().Generate();
         }
 
         [Test]
