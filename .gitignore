@@ -5,5 +5,7 @@
 /.vs
 /BridgePattern/.vs/BridgePattern/v16
 /BridgePattern/.vs/BridgePattern/DesignTimeBuild/.dtbcache
+/BridgePattern/bin
+/BridgePattern/obj
 /BridgePattern.Tests/bin
 /BridgePattern.Tests/obj
