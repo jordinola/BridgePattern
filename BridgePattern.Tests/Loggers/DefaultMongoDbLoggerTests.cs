@@ -19,7 +19,7 @@ namespace Tests.Loggers
         }
 
         [Test]
-        public void GetErrorMeessage()
+        public void GetErrorMessage()
         {
             var errorMessage = logger.GetErrorMessage(ex);
             errorMessage.Should().Be($"A default way to log an error in date: { DateTime.Now } with message { ex.Message }");

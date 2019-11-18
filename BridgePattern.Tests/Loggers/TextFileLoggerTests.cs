@@ -19,7 +19,7 @@ namespace Tests.Loggers
         }
 
         [Test]
-        public void GetErrorMeessage()
+        public void GetErrorMessage()
         {
             var errorMessage = logger.GetErrorMessage(ex);
             errorMessage.Should().Be($"An exception ocurred in date: { DateTime.Now }.\n - StackTrace: { ex.StackTrace } \n - InnerException: { ex.InnerException } \n - Message: { ex.Message }");
