@@ -2,7 +2,7 @@
 using Moq;
 using System;
 
-namespace BridgePattern.Tests.ConcreteImplementor.Infraestructure
+namespace BridgePattern.Tests.RefinedAbstraction.Infraestructure
 {
     public static class IErrorMock
     {

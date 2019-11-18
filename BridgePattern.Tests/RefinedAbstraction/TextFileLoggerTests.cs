@@ -1,26 +1,26 @@
 ﻿using Bogus;
 using BridgePattern.RefinedAbstraction;
-using BridgePattern.Tests.ConcreteImplementor.Infraestructure;
+using BridgePattern.Tests.RefinedAbstraction.Infraestructure;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
 
-namespace Tests.ConcreteImplementor
+namespace Tests.RefinedAbstraction
 {
-    public class SqlLoggerTests
+    public class TextFileLoggerTests
     {
-        private SqlLogger logger;
+        private TextFileLogger logger;
         private Exception ex;
 
         [SetUp]
         public void Setup()
         {
             ex = new Faker<Exception>().Generate();
-            logger = new SqlLogger(IErrorMock.GetIErrorMock());
+            logger = new TextFileLogger(IErrorMock.GetIErrorMock());
         }
 
         [Test]
-        public void LogToSql_Success()
+        public void LogToTextFile_Success()
         {
             logger.Write(ex);
             var success = true;
@@ -28,7 +28,7 @@ namespace Tests.ConcreteImplementor
         }
 
         [Test]
-        public void LogToSql_Fail()
+        public void LogToTextFile_Fail()
         {
             logger.Write(ex);
             var success = false;

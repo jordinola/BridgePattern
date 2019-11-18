@@ -1,13 +1,13 @@
-using Bogus;
+﻿using Bogus;
 using BridgePattern.ConcreteImplementor;
 using BridgePattern.Implementor;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
 
-namespace Tests.RefinedAbstraction
+namespace Tests.ConcreteImplementor
 {
-    public class CustomErrorTests
+    public class DefaultErrorTests
     {
         private IError error;
         private Exception ex;
@@ -15,15 +15,15 @@ namespace Tests.RefinedAbstraction
         [SetUp]
         public void Setup()
         {
-            error = new CustomError();
+            error = new DefaultError();
             ex = new Faker<Exception>().Generate();
         }
 
         [Test]
-        public void GetCustomErrorMessage()
+        public void GetDefaultErrorMessage()
         {
             var errorMessage = error.GetErrorMessage(ex);
-            errorMessage.Should().Be($"An exception ocurred in date: { DateTime.Now }.\n - StackTrace: { ex.StackTrace } \n - InnerException: { ex.InnerException } \n - Message: { ex.Message }");
+            errorMessage.Should().Be("An error ocurred in the application");
         }
     }
 }

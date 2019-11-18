@@ -5,7 +5,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using System;
 
-namespace Tests.RefinedAbstraction
+namespace Tests.ConcreteImplementor
 {
     public class DetailedErrorTests
     {

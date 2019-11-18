@@ -1,26 +1,26 @@
 ﻿using Bogus;
 using BridgePattern.RefinedAbstraction;
-using BridgePattern.Tests.ConcreteImplementor.Infraestructure;
+using BridgePattern.Tests.RefinedAbstraction.Infraestructure;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
 
-namespace Tests.ConcreteImplementor
+namespace Tests.RefinedAbstraction
 {
-    public class MongoDbLoggerTests
+    public class SqlLoggerTests
     {
-        private MongoDbLogger logger;
+        private SqlLogger logger;
         private Exception ex;
 
         [SetUp]
         public void Setup()
         {
             ex = new Faker<Exception>().Generate();
-            logger = new MongoDbLogger(IErrorMock.GetIErrorMock());
+            logger = new SqlLogger(IErrorMock.GetIErrorMock());
         }
 
         [Test]
-        public void LogToMongo_Success()
+        public void LogToSql_Success()
         {
             logger.Write(ex);
             var success = true;
@@ -28,7 +28,7 @@ namespace Tests.ConcreteImplementor
         }
 
         [Test]
-        public void LogToMongo_Fail()
+        public void LogToSql_Fail()
         {
             logger.Write(ex);
             var success = false;

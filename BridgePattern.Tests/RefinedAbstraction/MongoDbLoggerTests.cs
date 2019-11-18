@@ -1,26 +1,26 @@
 ﻿using Bogus;
 using BridgePattern.RefinedAbstraction;
-using BridgePattern.Tests.ConcreteImplementor.Infraestructure;
+using BridgePattern.Tests.RefinedAbstraction.Infraestructure;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
 
-namespace Tests.ConcreteImplementor
+namespace Tests.RefinedAbstraction
 {
-    public class TextFileLoggerTests
+    public class MongoDbLoggerTests
     {
-        private TextFileLogger logger;
+        private MongoDbLogger logger;
         private Exception ex;
 
         [SetUp]
         public void Setup()
         {
             ex = new Faker<Exception>().Generate();
-            logger = new TextFileLogger(IErrorMock.GetIErrorMock());
+            logger = new MongoDbLogger(IErrorMock.GetIErrorMock());
         }
 
         [Test]
-        public void LogToTextFile_Success()
+        public void LogToMongo_Success()
         {
             logger.Write(ex);
             var success = true;
@@ -28,7 +28,7 @@ namespace Tests.ConcreteImplementor
         }
 
         [Test]
-        public void LogToTextFile_Fail()
+        public void LogToMongo_Fail()
         {
             logger.Write(ex);
             var success = false;
