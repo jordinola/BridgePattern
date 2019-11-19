@@ -14,12 +14,7 @@ The Bridge pattern seeks to decouple an abstraction from its implementation such
 
 Let's consider a basic scenario of making the payment related to the bonos in a company. We could have the following scenarios:
 
-* Make a deposit for achieved goals
-* Make a deposit for working extra hours
-* Generate a check for achieved goals
-* Generate a check for working extra hours
-
-{% file src=".gitbook/assets/realcase.PNG" %}
+![](.gitbook/assets/realcase.PNG)
 
 There is a possibility that new requirements comes, like:
 
@@ -49,7 +44,7 @@ Let's consider the example we saw in the previous point. Having in mind the dime
 * The _**Bonos**_ would be the _**Implementation**_ that will expose a GetRemuneration\(\) method.
 * Finally, the _**Achieved Goals**_, _**Extra Hours**_, etc would be the _**Concrete Implementations**_ that will have to implement the GetRemuneration\(\) method to retrieve the amount of money to be paid.
 
-{% file src=".gitbook/assets/architecture.PNG" %}
+![](.gitbook/assets/architecture.PNG)
 
 ### ☢What problems does it solve?
 
