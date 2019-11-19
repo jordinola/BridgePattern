@@ -1,1 +1,2 @@
-# BridgePattern
+# Initial page
+
